@@ -5,7 +5,7 @@ class TopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Stack(
       children: [
         Container(
           width: double.infinity,
@@ -20,8 +20,10 @@ class TopBar extends StatelessWidget {
         ),
         Container(
           width: double.infinity,
+          margin: const EdgeInsets.only(top: 236),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(32),
+            color: Colors.white,
           ),
           child: Container(
             margin: const EdgeInsets.only(left: 28, top: 48),
@@ -33,20 +35,22 @@ class TopBar extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 22,
-                      fontWeight: FontWeight.bold
-                  ),
+                      fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   height: 8,
                 ),
                 Text(
                   'Sign in to continue',
-                  style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w100),
-                )
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w100),
+                ),
               ],
             ),
           ),
-        )
+        ),
       ],
     );
   }
