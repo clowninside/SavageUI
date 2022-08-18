@@ -11,6 +11,27 @@ class SignPage extends StatelessWidget {
       body: Column(
         children: const [
           TopBar(),
+          SizedBox(
+            height: 48,
+          ),
+          Text('EMAIL'),
+          SizedBox(
+            height: 28,
+          ),
+          Text('PASSWORD'),
+          SizedBox(
+            height: 38,
+          ),
+          Text('LOGIN'),
+          SizedBox(
+            height: 18,
+          ),
+          Text('Forgot password?'),
+          Spacer(),
+          Text('CREATE AN ACCOUNT'),
+          SizedBox(
+            height: 55,
+          ),
         ],
       ),
     );
