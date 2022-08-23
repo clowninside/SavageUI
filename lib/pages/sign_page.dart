@@ -17,44 +17,141 @@ class SignPage extends StatelessWidget {
           const SizedBox(
             height: 48,
           ),
-          Row(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(left: 28, right: 18),
-                height: 38,
-                width: 38,
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade900,
-                  borderRadius: BorderRadius.circular(12),
+          Padding(
+            padding: const EdgeInsets.only(right: 28.0, left: 28.0),
+            child: Row(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(right: 18),
+                  height: 38,
+                  width: 38,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade900,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(
+                    Icons.mail_outline,
+                    color: Colors.white,
+                  ),
                 ),
-                child: const Icon(
-                  Icons.mail_outline,
-                  color: Colors.white,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      TextField(
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                        ),
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.zero,
+                          labelText: 'EMAIL',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            letterSpacing: 1,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                          hintText: 'esther.bowen@mail.com',
+                          hintStyle: TextStyle(
+                            fontSize: 14,
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            ),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            ),
+                          ),
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              const Text('EMAIL'),
-            ],
+              ],
+            ),
           ),
           const SizedBox(
             height: 28,
           ),
-          Row(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(left: 28, right: 18),
-                height: 38,
-                width: 38,
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade900,
-                  borderRadius: BorderRadius.circular(12),
+          Padding(
+            padding: const EdgeInsets.only(right: 28.0, left: 28.0),
+            child: Row(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(right: 18),
+                  height: 38,
+                  width: 38,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade900,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(
+                    Icons.lock_outline,
+                    color: Colors.white,
+                  ),
                 ),
-                child: const Icon(
-                  Icons.lock_outline,
-                  color: Colors.white,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      TextField(
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                        ),
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          suffixIcon: Padding(
+                            padding: EdgeInsets.only(right: 10),
+                            child: IconTheme(
+                                data: IconThemeData(color: Colors.grey),
+                                child: Icon(Icons.remove_red_eye_sharp)),
+                          ),
+                          contentPadding: EdgeInsets.zero,
+                          hintText: '••••••',
+                          labelText: 'PASSWORD',
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            letterSpacing: 1,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                          hintStyle: TextStyle(
+                            fontSize: 14,
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            ),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            ),
+                          ),
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              const Text('PASSWORD'),
-            ],
+              ],
+            ),
           ),
           const SizedBox(
             height: 38,
